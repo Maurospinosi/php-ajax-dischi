@@ -1,3 +1,29 @@
+@media screen and (max-width:735px){
+ main{
+   max-height: content;
+ }
+ .img_logo{
+   display: flex;
+   justify-content: flex-start;
+   margin-left: 15px;
+ }
+ .flex{
+   padding-top: 50px;
+ }
+}
+@media screen and (min-width:736px){
+ main{
+   height: calc(100vh - 70px);
+ }
+ .img_logo{
+   display: flex;
+   justify-content: flex-end;
+ }
+ .flex{
+   padding-top: 150px;
+ }
+}
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +33,7 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 .container{
-  width: 1200px;
+  max-width: 1200px;
 }
 li{
   list-style: none;

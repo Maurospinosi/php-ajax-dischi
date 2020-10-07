@@ -3,10 +3,13 @@ header{
   background-color: rgb(40,56,70);
   display: flex;
   align-items:center;
-  padding-left: 500px;
+  div{
+    width: 600px;
+  }
   img{
+    cursor: pointer;
+    padding-right: 0;
     height: 50px;
     width:50px;
-    color: green;
   }
 }

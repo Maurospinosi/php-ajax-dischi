@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Dischi in Php</title>
     <link rel="stylesheet" href="dist/app.css">
@@ -10,7 +11,11 @@
   </head>
   <body>
     <header>
-        <img src="img/logo-small.svg" alt="logo">
+      <div>
+        <span class="img_logo">
+          <img src="img/logo-small.svg" alt="logo">
+        </span>
+      </div>
     </header>
 <!-- ------------------------------------------------------------------------     -->
     <main>
