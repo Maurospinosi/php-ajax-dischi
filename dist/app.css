@@ -4,8 +4,52 @@
   padding: 0;
 }
 
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  height: 70px;
+  background-color: #283846;
+  display: flex;
+}
+
+header img {
+  align-self: center;
+  height: 50px;
+  width: 50px;
+  color: green;
+}
+
+main {
+  background-color: #1e2d3b;
+  height: 100vh;
+}
+
 img {
   height: 200px;
   width: 150px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul {
+  background-color: red;
+  margin: 10px 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.main_list {
+  margin-top: 150px;
 }
 

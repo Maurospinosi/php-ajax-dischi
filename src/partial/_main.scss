@@ -1,4 +1,22 @@
+main{
+  background-color: rgb(30,45,59);
+  height:100vh;
+}
 img{
   height: 200px;
   width:150px;
+}
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+ul{
+  background-color: red;
+  margin: 10px 20px;
+  text-align: center;
+  padding: 10px;  
+}
+.main_list{
+  margin-top: 150px;
 }

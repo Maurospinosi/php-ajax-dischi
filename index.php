@@ -8,11 +8,23 @@
     <link rel="stylesheet" href="dist/app.css">
   </head>
   <body>
-    <?php foreach ($database as $album){ ?>
-      <img src="<?php echo $album["poster"] ?>" alt="poster">
-      <h3><?php echo $album["title"]; ?></h3>
-      <div><?php echo $album["author"] ?></div>
-      <div><?php echo $album["year"] ?></div>
-    <?php } ?>
+    <header>
+      <div class="container">
+        <img src="img/logo-small.svg" alt="logo">
+      </div>
+    </header>
+<!-- ------------------------------------------------------------------------     -->
+    <main>
+      <div class="container flex">
+        <?php foreach ($database as $album){ ?>
+          <ul class="main_list">
+            <li><img src="<?php echo $album["poster"] ?>" alt="poster"></li>
+            <li><?php echo $album["title"]; ?></li>
+            <li><?php echo $album["author"] ?></li>
+            <li><?php echo $album["year"] ?></li>
+          </ul>
+        <?php } ?>
+      </div>
+    </main>
   </body>
 </html>
