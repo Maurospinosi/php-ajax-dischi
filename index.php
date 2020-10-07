@@ -6,18 +6,17 @@
     <meta charset="utf-8">
     <title>Dischi in Php</title>
     <link rel="stylesheet" href="dist/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
-      <div class="container">
         <img src="img/logo-small.svg" alt="logo">
-      </div>
     </header>
 <!-- ------------------------------------------------------------------------     -->
     <main>
       <div class="container flex">
         <?php foreach ($database as $album){ ?>
-          <ul class="main_list">
+          <ul>
             <li><img src="<?php echo $album["poster"] ?>" alt="poster"></li>
             <li><?php echo $album["title"]; ?></li>
             <li><?php echo $album["author"] ?></li>

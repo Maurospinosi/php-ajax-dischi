@@ -9,14 +9,31 @@ img{
 .flex{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  padding-top: 150px;
+  margin: auto;
 }
 ul{
-  background-color: red;
+  background-color: rgb(46,58,70);
   margin: 10px 20px;
   text-align: center;
-  padding: 10px;  
+  padding: 10px;
+  height: 430px;
+  width: 200px;
+  cursor:pointer;
+  li:nth-child(2){
+    color:white;
+    font-weight: 600;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  li:nth-child(3){
+    color:grey;
+  }
+  li:nth-child(4){
+    color:grey;
+  }
 }
-.main_list{
-  margin-top: 150px;
+li{
+  padding-left:5px;
+  padding-right:5px;
 }

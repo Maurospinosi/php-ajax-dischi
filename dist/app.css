@@ -4,9 +4,12 @@
   padding: 0;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 .container {
   width: 1200px;
-  margin: auto;
 }
 
 li {
@@ -17,10 +20,11 @@ header {
   height: 70px;
   background-color: #283846;
   display: flex;
+  align-items: center;
+  padding-left: 500px;
 }
 
 header img {
-  align-self: center;
   height: 50px;
   width: 50px;
   color: green;
@@ -39,17 +43,37 @@ img {
 .flex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  padding-top: 150px;
+  margin: auto;
 }
 
 ul {
-  background-color: red;
+  background-color: #2e3a46;
   margin: 10px 20px;
   text-align: center;
   padding: 10px;
+  height: 430px;
+  width: 200px;
+  cursor: pointer;
 }
 
-.main_list {
-  margin-top: 150px;
+ul li:nth-child(2) {
+  color: white;
+  font-weight: 600;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+ul li:nth-child(3) {
+  color: grey;
+}
+
+ul li:nth-child(4) {
+  color: grey;
+}
+
+li {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
