@@ -16091,7 +16091,33 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 
 var Handlebars = __webpack_require__(/*! handlebars */ "./node_modules/handlebars/dist/cjs/handlebars.js");
 
-$(document).ready(function () {});
+$(document).ready(function () {
+  $.ajax({
+    "url": "http://localhost/php-ajax-dischi/api.php",
+    "method": "GET",
+    "success": function success(data) {
+      render(data);
+    },
+    "error": function error(err) {
+      alert("Errore");
+    }
+  });
+});
+var source = $("#album-template").html();
+var template = Handlebars.compile(source);
+
+function render(result) {
+  for (var i = 0; i < result.length; i++) {
+    var context = {
+      "poster": result[i].poster,
+      "title": result[i].title,
+      "author": result[i].author,
+      "year": result[i].year
+    };
+    var html = template(context);
+    $("#list_album").append(html);
+  }
+}
 
 /***/ }),
 
@@ -16102,7 +16128,7 @@ $(document).ready(function () {});
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Can't find stylesheet to import.\n  ╷\n1 │ @import \"partial/_common.scss\";\r\n  │         ^^^^^^^^^^^^^^^^^^^^^^\n  ╵\n  C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\src\\app.scss 1:9  root stylesheet\n    at C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\webpack\\lib\\NormalModule.js:316:20\n    at C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass-loader\\dist\\index.js:73:7\n    at Function.call$2 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:89281:16)\n    at _render_closure1.call$2 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:78489:12)\n    at _RootZone.runBinary$3$3 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:26472:18)\n    at _FutureListener.handleError$1 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:25000:19)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:25297:49)\n    at Object._Future__propagateToListeners (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:4489:77)\n    at _Future._completeError$2 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:25130:9)\n    at _AsyncAwaitCompleter.completeError$2 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:24473:12)\n    at Object._asyncRethrow (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:4238:17)\n    at C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:13081:20\n    at _wrapJsFunctionForAsync_closure.$protected (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:4263:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:24494:12)\n    at _awaitOnObject_closure0.call$2 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:24486:25)\n    at _RootZone.runBinary$3$3 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:26472:18)\n    at _FutureListener.handleError$1 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:25000:19)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:25297:49)\n    at Object._Future__propagateToListeners (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:4489:77)\n    at _Future._completeError$2 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:25130:9)\n    at _AsyncAwaitCompleter.completeError$2 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:24473:12)\n    at Object._asyncRethrow (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:4238:17)\n    at C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:15723:20\n    at _wrapJsFunctionForAsync_closure.$protected (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:4263:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:24494:12)\n    at _awaitOnObject_closure0.call$2 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:24486:25)\n    at _RootZone.runBinary$3$3 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:26472:18)\n    at _FutureListener.handleError$1 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:25000:19)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:25297:49)\n    at Object._Future__propagateToListeners (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:4489:77)\n    at _Future._completeError$2 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:25130:9)\n    at _AsyncAwaitCompleter.completeError$2 (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:24473:12)\n    at Object._asyncRethrow (C:\\Users\\Mauro\\desktop\\boolean-github\\php-ajax-dischi\\node_modules\\sass\\sass.dart.js:4238:17)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
